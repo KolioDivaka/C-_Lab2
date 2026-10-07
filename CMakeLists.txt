@@ -3,4 +3,6 @@ project(Lab2)
 
 set(CMAKE_CXX_STANDARD 26)
 
-add_executable(Lab2 main.cpp)
+add_executable(Lab2 main.cpp
+        "Exercise 1/Sensor.cpp"
+        "Exercise 1/Sensor.h")
