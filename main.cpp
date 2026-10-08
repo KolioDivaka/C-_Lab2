@@ -1,12 +1,18 @@
 #include <iostream>
 
+#include "Exercice 2/Student.h"
 #include "Exercise 1/Sensor.h"
 using namespace std;
 
  static void exercise1();
+static void exercise2();
 int main() {
+
     //Call Exercise 1
-    exercise1();
+    // exercise1();
+    //Call Exercise 2
+    exercise2();
+
 }
 
 static void exercise1() {
@@ -26,5 +32,19 @@ static void exercise1() {
     sensor2.describe("Burgas",'k');
     sensor2.describe("Burgas",'f');
     sensor2.describe("Burgas",'g');
+
+}
+
+static void exercise2() {
+   const Student student1("Kolio","888241452");
+    const Student student2("Koli","888241453");
+    const Student student3("Kol","888241454");
+
+    Course course("PE",10);
+
+    enrollStudent(course,student1);
+    enrollStudent(course,student2);
+    enrollStudent(course,student3);
+    Registar::printReport(course);
 
 }
