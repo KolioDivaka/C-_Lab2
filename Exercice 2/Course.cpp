@@ -32,12 +32,11 @@ void Course::iterateCurrentStudent() {
 
 
 void enrollStudent( Course &c, const Student &s) {
-    if (c.getCurrentStudents() < c.getMaxStudents()) {
-        cout<<c.getTitle()<<endl;
-        cout <<"Enrolled Student: "<<s.getName()<<endl;
-        cout << "Student ID: "<< s.getId() <<endl;
+    if (c.currentStudents < c.maxStudents) {
+        cout<<c.title<<endl;
+        cout <<"Enrolled Student: "<<s.name<<endl;
+        cout << "Student ID: "<< s.id <<endl;
         c.iterateCurrentStudent();
-
     }
     else {
         cout<< "Can't enroll Student"<<endl;

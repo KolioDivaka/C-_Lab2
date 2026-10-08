@@ -9,11 +9,11 @@
 #include "Course.h"
 using namespace std;
 
-
+//The friend function doesnt use the getter cuz it has access to the private var of the Course class
 void Registar::printReport(const Course& c) {
-    double currCapacity = (c.getCurrentStudents()*100.00)/c.getMaxStudents();
-    cout<< "Course Title: "<<c.getTitle()<<endl;
-    cout<< "Enrolled Students are:"<< c.getCurrentStudents()<<'/'<< c.getMaxStudents()<<endl;
+    double currCapacity = (c.currentStudents*100.00)/c.maxStudents;
+    cout<< "Course Title: "<<c.title<<endl;
+    cout<< "Enrolled Students are:"<< c.currentStudents<<'/'<< c.maxStudents<<endl;
     cout<< "Current Capacity: "<<currCapacity<<'%'<<endl;
 
 }
