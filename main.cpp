@@ -3,19 +3,25 @@
 #include "Exercice 2/Student.h"
 #include "Exercice 5/Stack.h"
 #include "Exercise 1/Sensor.h"
+#include "Exercise 6/Printer.h"
 using namespace std;
 
- static void exercise1();
+static void exercise1();
 static void exercise2();
-static void exercise3();
+static void exercise5();
+static void exercise6();
+
+
 int main() {
 
     //Call Exercise 1
-    exercise1();
+    // exercise1();
     //Call Exercise 2
-    exercise2();
-    //Call Exercise 3
-     exercise3();
+    // exercise2();
+    //Call Exercise 5
+     // exercise5();
+    //Call Exercise 6
+    exercise6();
 
 }
 
@@ -53,7 +59,7 @@ static void exercise2() {
 
 }
 
-static void exercise3() {
+static void exercise5() {
     Stack stack;
 
     //First load()
@@ -77,5 +83,24 @@ static void exercise3() {
     stack.load('h','/');
     stack.display();
     stack.clear();
+
+}
+static void exercise6() {
+    Printer printer;
+    Scanner scanner;
+
+    scanner.plugUsb();
+    printer.plugUsb();
+
+    cout<< isUsbBusy(printer, scanner) << endl;
+
+    scanner.unplugUsb();
+    printer.unplugUsb();
+
+    cout<< isUsbBusy(printer, scanner) << endl;
+}
+
+bool isUsbBusy(const Printer &p, const Scanner &s) {
+    return p.usbInUse || s.usbInUse;
 
 }

@@ -13,4 +13,8 @@ add_executable(Lab2 main.cpp
         "Exercice 2/Registar.cpp"
         "Exercice 2/Registar.h"
         "Exercice 5/Stack.cpp"
-        "Exercice 5/Stack.h")
+        "Exercice 5/Stack.h"
+        "Exercise 6/Printer.cpp"
+        "Exercise 6/Printer.h"
+        "Exercise 6/Scanner.cpp"
+        "Exercise 6/Scanner.h")
